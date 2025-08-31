@@ -35,7 +35,9 @@ const Hero = () => {
         digital experience.
       </p>
       <div>
-        <img src={assets.hero_img} alt="" />
+        <img src={assets.hero_img} className="w-full max-w-6xl" alt="" />
+        <img src={assets.bgImage1} className="absolute top-40 right-40 sm:top-30
+         sm:right-60 -z-1 dark:hidden" alt="" />
       </div>
     </div>
   );
