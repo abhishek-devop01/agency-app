@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
 const SeviceCard = ({service, index}) => {
+
+  const [positio, setPosition] = useState({x:0, y: 0})
   return (
     <div
       className="relative overflow-hidden max-w-lg m-2 sm:m-4 rounded-xl border
-    border-gray-200 dark:border-gray-700 shadow-2xl shadow-gray-100"
+    border-gray-200 dark:border-gray-700 shadow-2xl shadow-gray-100 dark:shadow-white/10"
     >
       <div
         className="pointer-events-none blur-2xl rounded-full bg-gradient-to-r from-blur-500 via-indigo-500
@@ -17,7 +19,8 @@ const SeviceCard = ({service, index}) => {
                <img src={service.icon} className="max-w-24 bg-white dark:bg-gray-900 rounded-full m-2" alt="" />
           </div>
           <div className="flex-1">
-               <h3>{service.title}</h3>
+               <h3 className="font-bold">{service.title}</h3>
+               <p className="text-sm mt-2">{service.description}</p>
           </div>
 
         </div>
