@@ -20,7 +20,13 @@ const Teams = () => {
                border border-gray-100 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-xl shadow-gray-100
                dark:shadow-white/5
                hover:scale-103 transition-all duration-400"
-          ></div>
+          >
+            <img className="w-12 h-12 rounded-full" src={team.image} alt="teamImg" />
+            <div className="flex-1">
+              <h3 className="font-bold text-sm">{team.name}</h3>
+              <p className="text-xs opacity-60">{team.title}</p>
+            </div>
+          </div>
         ))}
       </div>
     </div>
