@@ -18,22 +18,22 @@ const Footer = ({ theme }) => {
           </p>
           <ul className="flex gap-8">
             <li>
-              <a className="hover:text" href="#hero">
+              <a className="hover:text-primary" href="#hero">
                 Home
               </a>
             </li>
             <li>
-              <a className="hover:text" href="#services">
+              <a className="hover:text-primary" href="#services">
                 Services
               </a>
             </li>
             <li>
-              <a className="hover:text" href="#our-work">
+              <a className="hover:text-primary" href="#our-work">
                 Our Work
               </a>
             </li>
             <li>
-              <a className="hover:text" href="#contact-us">
+              <a className="hover:text-primary" href="#contact-us">
                 Contact Us
               </a>
             </li>
@@ -56,7 +56,20 @@ const Footer = ({ theme }) => {
           </div>
         </div>
       </div>
+      <hr className="border-gray-300 dark:border-gray-600 my-6" />
+
+      {/* Footer bottom  */}
+      <div className="pb-6 text-sm text-gray-500 flex justify-center sm:justify-between gap-4 flex-wrap">
+        <p>Copyright 2025 &copy; Abhishek - All Right Reserved</p>
+        <div className="flex items-center justify-between gap-4">
+          <img src={assets.facebook_icon} alt="" />
+          <img src={assets.twitter_icon} alt="" />
+          <img src={assets.instagram_icon} alt="" />
+          <img src={assets.linkedin_icon} alt="" />
+        </div>
+      </div>
     </div>
+
   );
 };
 
