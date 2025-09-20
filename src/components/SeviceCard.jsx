@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import { motion } from "motion/react";
 
 const SeviceCard = ({ service, index }) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -10,10 +11,11 @@ const SeviceCard = ({ service, index }) => {
     setPosition({ x: e.clientX - bounds.left, y: e.clientY - bounds.top });
   };
 
-
-
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.3 }}
       className="relative overflow-hidden max-w-lg m-2 sm:m-4 rounded-xl border
     border-gray-200 dark:border-gray-700 shadow-2xl shadow-gray-100 dark:shadow-white/10"
       onMouseEnter={() => setVisible(true)}
@@ -44,7 +46,7 @@ const SeviceCard = ({ service, index }) => {
           <p className="text-sm mt-2">{service.description}</p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

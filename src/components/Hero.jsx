@@ -52,15 +52,15 @@ const Hero = () => {
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 1.4 }}
+        transition={{ duration: 0.5, delay: 1.5 }}
         viewport={{ once: true }}
         className="relative"
       >
         <img src={assets.hero_img} className="w-full max-w-6xl" alt="" />
         <img
           src={assets.bgImage1}
-          className="absolute top-40 right-40 sm:top-30
-         sm:right-60 -z-1 dark:hidden"
+          className="absolute -top-40 -right-40 sm:-top-100
+         sm:-right-70 -z-1 dark:hidden"
           alt=""
         />
       </motion.div>
